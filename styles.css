@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(6, 14, 43);
+	overflow: hidden;
+}
+
+nav {
+	padding: 0.25em;
+	display: flex;
+	justify-content: space-around;
+	align-content: space-around;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+.introduction {
+	padding: 1.15em;
+	font-size: 1.45em;
+	color: rgb(2, 237, 18);
+	font-family: "PT Sans", sans-serif;
+}
+
+.more-about-me {
+	font-family: "Open Sans", sans-serif;
+	padding: 1.25em;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	color: rgb(186, 138, 4);
+	font-size: 1.5em;
+	text-decoration: none;
+}
+
+.more-about-me::before {
+	position: absolute;
+	content: attr(data-content);
+	color: rgb(255, 193, 20);
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+	transition: clip-path 300ms ease;
+}
+
+.more-about-me:hover::before {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hobbies {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25em;
+	padding: 1.35em;
+	color: rgb(230, 129, 47);
+}
+
+.hobby {
+	text-decoration: underline yellowgreen 3px;
+}
+
+.social-list {
+	margin-left: 2em;
+	padding: 1.5em;
+	list-style-type: none;
+}
+
+.social-link {
+	font-family: "PT Sans", sans-serif;
+	color: rgb(76, 158, 5);
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 728px) {
+	.more-about-me {
+		padding: 0.8em;
+		font-size: 0.85em;
+	}
+
+	img {
+		width: 70px;
+		height: 70px;
+	}
+}
