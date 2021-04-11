@@ -81,20 +81,31 @@ nav ul {
 	color: rgb(186, 138, 4);
 	font-size: 1.5em;
 	text-decoration: none;
+	transition: color 0.3s ease-out;
 }
 
 .more-about-me::before {
+	content: "";
 	position: absolute;
-	content: attr(data-content);
-	color: rgb(255, 193, 20);
-	text-decoration: underline;
-	text-decoration-style: wavy;
-	clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-	transition: clip-path 300ms ease;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	transform: translateY(calc(100% - 2px));
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+		60deg,
+		rgb(219, 138, 16) 0%,
+		rgb(222, 219, 27) 100%
+	);
+	transition: transform 0.25s ease-out;
 }
 
+.more-about-me:hover {
+	color: rgb(6, 14, 43);
+}
 .more-about-me:hover::before {
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	transform: translateY(15%);
 }
 
 .hobbies {
