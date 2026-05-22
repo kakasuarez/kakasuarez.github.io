@@ -2,7 +2,7 @@
 title: "PGNSeek"
 description: "Natural language chess search"
 date: "Apr 20 2026"
-demoURL: "https://github.com/kakasuarez/PGNSeek"
+demoURL: "https://pgn-seek.vercel.app"
 repoURL: "https://github.com/kakasuarez/PGNSeek"
 ---
 
